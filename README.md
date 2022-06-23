@@ -103,4 +103,3 @@ Contains the HTML pages used for the webpage. Edit these to fit your project. in
 `host_config`
 **Only modify `host_config`. Do not touch the other files.**
 # Jammbea
-# SC22-BatchA-Blue-Pythons-Jammbea

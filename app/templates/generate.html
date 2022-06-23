@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>JAMMBEA</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='/assets/img/BluePythonNew.jpg')}}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{ url_for('static', filename='/css/styles.css')}}" rel="stylesheet" id="theme-link"/>/>
+        <link href="{{ url_for('static', filename='/css/prism.css')}}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">JAMMBEA</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-secondary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#home">Home</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#code-generator">Code Generator</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#team">Team</a></li>
+                        <button class="btn-toggle">Toggle Dark-Mode</button>
+                        <div class="toggle-btn-new" onclick="this.classList.toggle('active'); changeMode();">
+                          <i class="fas fa-sun" id="under-new" style="position:absolute; margin-left:1px; margin-top:1px;"></i>
+                          <i class="fas fa-moon" id="under-new" style="margin-left:40px; position:absolute"></i>
+                          <div class="inner-circle-new" id="top-new">
+                          </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='/assets/img/newnew-header.jpg')}}" alt="..."style="width:50%;height:auto;"/>
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Python Code Generator</h1>
+                <!-- Try Product Button-->
+            <br>
+            <div style="position:relative; top:15px;">
+              <a class="try" style = "text-decoration: none;" href="#code-generator">Try It Out</a>
+              </div>
+          
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+          </header>
+        <!-- Product Description 1 Section-->
+        <section class="page-section portfolio" id="home">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Meet Jammbea</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Description sentence-->
+                <center>
+                  <div id="description-font-changer" style="position:relative; top:-20;">Our team decided to build an AI product that generates python code according to the user's input. We came to this decision of making a code generator because we know that programming in the python language can sometimes be difficult, especially for beginners. This product can show aspiring programmers examples of working code and give them inspiration for future projects.</div>
+                </center>
+              <hr>
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Portfolio Item 1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="{{ url_for('static', filename='/assets/img/portfolio/Step 1.png')}}" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 2-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="{{ url_for('static', filename='/assets/img/portfolio/Step 2.png')}}" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 3-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="{{ url_for('static', filename='/assets/img/portfolio/Step 3.png')}}" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 4-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="{{ url_for('static', filename='/assets/img/portfolio/Step 4.png')}}" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 5-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="{{ url_for('static', filename='/assets/img/portfolio/Step 5.png')}}" alt="..." />
+                        </div>
+                    </div>
+                     <!-- Portfolio Item 6-->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="{{ url_for('static', filename='/assets/img/portfolio/Step 6.gif')}}" alt="..." />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Code Generator Section-->
+        <section class="page-section bg-primary text-white mb-0" id="code-generator">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">Code Generator</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Code Generator Section Content-->
+              <center>
+                <div class="col-lg-4 ms-auto"><p class="lead"> </p></div>
+              </center>
+            <em></em><center>
+              <center>
+                <form action="{{ url_for('generate') + '#code-generator'}}" method="post">
+                  <div class="dropdown"  id="dropdown">
+  <button class="dropbtn" id="dropdown">Examples</button>
+  <div class="dropdown-content">
+    <a style = "color: black" onclick = "document.getElementById('textHolder').value = 'print'">print</a>
+    <a style = "color: black" onclick = "document.getElementById('textHolder').value = 'def'">def</a>
+    <a style = "color: black" onclick = "document.getElementById('textHolder').value = 'import random'">import random</a>
+  </div>
+</div>
+                  <input list="temp" name="temp" placeholder = "Choose temp:">
+                    <datalist id="temp">
+                      <option value="0.1">
+                      <option value="0.2">
+                      <option value="0.3">
+                      <option value="0.4">
+                      <option value="0.5">
+                      <option value="0.6">
+                      <option value="0.7">
+                      <option value="0.8">
+                      <option value="0.9">
+                    </datalist>
+                  <input list="length" name="length" placeholder = "Choose length:">
+                    <datalist id="length">
+                      <option value="50">
+                      <option value="100">
+                      <option value="150">
+                      <option value="200">
+                      <option value="250">
+                    </datalist>
+                <form action="{{ url_for('generate') + '#code-generator'}}" method = "post">
+                 
+                  <input type="textarea" name = "promptForm" id = "textHolder" placeholder = "Enter code..." rows="4" cols="50"/>
+                  <input type="submit" onclick="showLoader()" onclick="return empty()"  href="{{ url_for('generate') + '#code-generator'}}" value="Generate!"/>
+                </form>
+                  <div class="loader" id="loader" style="display:none;"></div>
+                </form>
+              </center>
+              </center>
+                <br>
+              <figure class="new">
+                <pre>
+                  <code class="language-py" contenteditable="true" spellcheck="false" style="margin-left: 5px"><p style="margin-left: 8px">{{data}}</p></code>
+                </pre>
+              </figure>
+            </div>
+        </section>
+        <!-- Team Section-->
+        <section class="page-section" id="team">
+          <div class="container">
+            <!-- Team Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary">Meet the Team</h2>
+            <center>
+                  <div id="quote-marker">-The Blue Pythons-</div>
+                </center>
+            <!-- Team Section Content-->
+            <div class="row">
+            </div>
+            <br>
+          
+            <div class="rown">
+              <div class="columnnew">
+                <div class="cardnew"><strong></strong>
+                  <img src="{{ url_for('static', filename='/assets/img/portfolio/Max_1.png')}}" alt="Person1" style="width:80%; border-radius:50%;">
+                  <div class="containernew">
+                    <h2 class="biographytext">Max Garske</h2>
+                      <p class="titlenew">Website Designer</p>
+                      <p class="biographytext">I am a rising 8th grader. Some of my favorite things to do are play soccer, skin, mountain bike, and code.</p>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="columnnew">
+                <div class="cardnew">
+                  <img src="{{ url_for('static', filename='/assets/img/portfolio/Jimmy_1.png')}}" alt="Person2" style="width:80%; border-radius:50%;">
+                  <div class="containernew">
+                    <h2 class="biographytext">Jimmy Fischer</h2>
+                    <p class="titlenew">Backend Developer</p>
+                    <p class="biographytext">I am 13 years old, a rising 8th grader, and my favorite subject is math.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="columnnew">
+                <div class="cardnew">
+                  <img src="{{ url_for('static', filename='/assets/img/portfolio/Minerva_1.png')}}" alt="Person2" style="width:80%; border-radius:50%;">
+                  <div class="containernew">
+                    <h2 class="biographytext">Minerva Cao</h2>
+                    <p class="titlenew">Data Scientist</p>
+                    <p class="biographytext">I am a rising 8th grader, and really enjoy math, music, and coding (obviously).</p>
+                  </div>
+                </div>
+              </div>
+              
+            <div class="rown">
+              <div class="columnnew">
+                <div class="cardnew">
+                  <img src="{{ url_for('static', filename='/assets/img/portfolio/Eric_1.png')}}" alt="personz" style="width:80%; border-radius:50%;">
+                  <div class="containernew">
+                    <h2 class="biographytext">Eric Guo</h2>
+                    <p class="titlenew">Website Designer-Backend Developer</p>
+                    <p class="biographytext">Rising to 8th grade next year, 12 years old, Sciences.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="columnnew">
+                <div class="cardnew">
+                  <img src="{{ url_for('static', filename='/assets/img/portfolio/Alexander_1.png')}}" alt="Persony" style="width:80%; border-radius:50%;">
+                  <div class="containernew">
+                    <h2 class="biographytext">Alexander Wang</h2>
+                    <p class="titlenew">Backend Developer</p>
+                    <p class="biographytext">I am a rising freshman who programs random things.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="columnnew">
+                <div class="cardnew"> 
+                  <img src="{{ url_for('static', filename='/assets/img/portfolio/Untitled_1.png')}}" alt="Personx" style="width:80%; border-radius:50%;">
+                  <div class="containernew">
+                    <h2 class="biographytext">Aaron Nguy</h2>
+                    <p class="titlenew">Backend Developer</p>
+                    <p class="biographytext">Some text that describes you.</p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <center>
+          <div class="row">
+                <div class="columnnew">
+                  <div class="cardnew">
+                    <img src="{{ url_for('static', filename='/assets/img/portfolio/Blake_1.png')}}" alt="persona" style="width:200px; border-radius:50%;">
+                    <div class="containernew">
+                      <h2 class="biographytext">Blake Martin</h2>
+                      <p class="titlenew">Instructor</p>
+                      <p class="biographytext">Computer science major, aspiring data scientist, and proud instructor of the Blue Pythons.
+</p>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </center>
+        </section>
+        <!-- Footer--> 
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">
+                            2627 Hanover Street,
+                            <br />
+                            Palo Alto, CA 94304
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/aicampdotorg/?view_public_for=849707208732789"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/aicampofficial"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/aicamp1/"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">About AI Camp</h4>
+                        <p class="lead mb-0">
+                            AI Camp is a summer camp for learning about Artificial Intelligence. Learn AI with zero coding experience. To learn more, visit 
+                            <a href="https://www.ai-camp.org/">AI Camp</a>
+                            .
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; BluePython Jammbea Code Generator 2022</small></div>
+        </div>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio Modal 1-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Step 1</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='/assets/img/portfolio/Step 1.png')}}" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Our team searched for a dataset with quality python code. We knew that better data for training the AI would result in a better product. Finally, we found a dataset on Kaggle, containing more than enough code to train our model. </p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 2-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Step 2</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='/assets/img/portfolio/Step 2.png')}}" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">For our project, our team had found a dataset full of Python code. However, all of the code was stored in nested folders. Using recursion in Python, we retrieved the data from the folders and concatenated it into a text file. We also tried doing this in the Linux Terminal. Next, we had to split the data into smaller parts because it was too large of a dataset. We used random in Python to get random samples of the data. Lastly, we found that our data had to be cleaned. Our team members worked together and removed the docstrings and comments from the code, using Python.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 3-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Step 3</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='/assets/img/portfolio/Step 3.png')}}" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">The next step was to train the AI model. Since we used Aitextgen, a library in Python that is used to generate text, we only needed to fine tune our model using the training data that we gathered before. </p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 4-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Step 4</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='/assets/img/portfolio/Step 4.png')}}" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">We tested out our AI Code Generator manually by entering different prompts in Google Colab. Based on the results, we processed the data again, and added more data. We found a better quality dataset, though it had less in quantity, and cleaned it, adding it to the original dataset. Then, we trained the AI, and re-evaluated. Finally, we used autopep8 as a python linter, which helped make the code look better.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 5-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Step 5</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='/assets/img/portfolio/Step 5.png')}}" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">We created the website using Bootstrap and revised it in html code. Collaborating on Replit, we made the front-end of our product.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 6-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Step 6</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='/assets/img/portfolio/Step 6.gif')}}" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Using Flask, the website and the AI parts of our product were merged together. This is where we are now.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+        <script src="{{ url_for('static', filename='js/prism.js')}}"></script>
+        <script src="{{ url_for('static', filename='js/scripts.js')}}"></script>
+        <script>
+         // Select the button
+          const btn = document.querySelector(".btn-toggle");
+          // Select the stylesheet <link>
+          const theme = document.querySelector("#theme-link");
+
+          // Listen for a click on the button
+          btn.addEventListener("click", function() {
+            // If the current URL contains "styles.css"
+            if (theme.getAttribute("href") == "{{ url_for('static', filename='/css/styles.css')}}") {
+              // ... then switch it to "dark-theme.css"
+              theme.href = "{{ url_for('static', filename='/css/dark-mode.css')}}";
+            // Otherwise...
+            } else {
+              // ... switch it to "light-theme.css"
+              theme.href = "{{ url_for('static', filename='/css/styles.css')}}";
+            }
+          });
+            </script>
+        <script>
+          function empty() {
+              var x;
+              x = document.getElementById("textHolder").value;
+              if (x == "") {
+                  document.getElementById('Generate').disabled=true
+                  return false;
+              } else {
+                document.getElementById('Generate').disabled=false;
+                showLoader()
+              }
+          }
+            </script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+(base) ]0;~/Daily Work/omni/app[01;34m~/Daily Work/omni/app[00m$ ls
+[0m[01;31m2022-06-20-135158.zip[0m  2022-06-21-155114.term  CodeFixer.ipynb  [01;34m__pycache__[0m  bluepythontest.py  main.py  [01;34mmodel[0m  requirements.txt  [01;34mstatic[0m  [01;34mtemplates[0m  utils.py
+(base) ]0;~/Daily Work/omni/app[01;34m~/Daily Work/omni/app[00m$ fla[Kk[Kake [K8 bluepythontest.py
+bluepythontest.py:1:22: E999 SyntaxError: invalid syntax
+(base) ]0;~/Daily Work/omni/app[01;34m~/Daily Work/omni/app[00m$ auto[K[K[K[Kautopep8 bluepythontest.py
+import json
+from urbanairship import common
+import logging
+import random.shuffle(readlist)
+
+from swgpy.object import *
+
+
+def create(kernel):
+	result = Creature()
+
+	result.template = "object/tantition"
+	result.attribute_template_id = 9
+	result.stfName("obj_n", "trandoshan_base_male")
+
+	return resultimport os
+
+
+def random_bytes(n):
+
+    return os.urandom(n)
+
+
+logger = logging.getLogger('urbanairship')
+
+
+class ChannelUninstall(object):
+    _gher_template = None
+    allow_unicode = None
+    line_break = ('lugin', 'hexportains', 'cursus',
+(base) ]0;~/Daily Work/omni/app[01;34m~/Daily Work/omni/app[00m$ autopep8 bluepythontest.py >> fixedcode.py
+(base) ]0;~/Daily Work/omni/app[01;34m~/Daily Work/omni/app[00m$ [K(base) ]0;~/Daily Work/omni/app[01;34m~/Daily Work/omni/app[00m$ python3 -m main
+Try to open
+
+    https://cocalc2.ai-camp.dev/2e2d14b2-3bf0-4b31-bb59-a06cad86df13/port/12345/
+
+
+ * Serving Flask app 'main' (lazy loading)
+ * Environment: production
+[31m   WARNING: This is a development server. Do not use it in a production deployment.[0m
+[2m   Use a production WSGI server instead.[0m
+ * Debug mode: on
+Address already in use
+Port 12345 is in use by another program. Either identify and stop that program, or start the server with a different port.
+(base) ]0;~/Daily Work/omni/app[01;34m~/Daily Work/omni/app[00m$ [K(base) ]0;~/Daily Work/omni/app[01;34m~/Daily Work/omni/app[00m$ [K(base) ]0;~/Daily Work/omni/app[01;34m~/Daily Work/omni/app[00m$ python3 -m main
+Try to open
+
+    https://cocalc2.ai-camp.dev/2e2d14b2-3bf0-4b31-bb59-a06cad86df13/port/12345/
+
+
+ * Serving Flask app 'main' (lazy loading)
+ * Environment: production
+[31m   WARNING: This is a development server. Do not use it in a production deployment.[0m
+[2m   Use a production WSGI server instead.[0m
+ * Debug mode: on
+Address already in use
+Port 12345 is in use by another program. Either identify and stop that program, or start the server with a different port.
+(base) ]0;~/Daily Work/omni/app[01;34m~/Daily Work/omni/app[00m$ 
